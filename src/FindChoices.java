@@ -22,7 +22,7 @@ public class FindChoices {
 
     private static int[] getIndicesFromValues(int[] menu, int value1, int value2) {
         int index1 = indexOf(menu, value1, -1);
-        int index2 = indexOf(menu, value2,index1);
+        int index2 = indexOf(menu, value2, index1);
         int[] indices = {Math.min(index1, index2), Math.max(index1, index2)};
         return indices;
     }

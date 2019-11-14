@@ -9,7 +9,7 @@ public class BinarySearch {
         int left = 0;
         int right = array.length - 1;
         while (left <= right) {
-            int mid = left + (right - left) / 2;
+            int mid = left + (right - left) / 2; // in case out of boundary
             if (array[mid] == x) {
                 return true;
             } else if (x < array[mid]) {
@@ -26,7 +26,7 @@ public class BinarySearch {
         if (left > right) {
             return false;
         }
-        int mid = (left + right) / 2;
+        int mid = left + (right - left) / 2;
         if (array[mid] == x) {
             return true;
         } else if (x < array[mid]) {
